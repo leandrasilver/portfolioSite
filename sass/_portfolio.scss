@@ -1,0 +1,67 @@
+.portfolio {
+	button{
+		margin:0;
+		margin: 0 2%;
+	}
+	.buttonContainer {
+		display: flex;
+		justify-content:center;
+		margin: 20px 0 ;
+	}
+	h2 {
+		font-weight: 400;
+		@include headingFontStyles( $textBlack, 2.4rem);
+	}
+	h3 {
+		letter-spacing: 0.1rem;
+		@include headingFontStyles( $textBlack, 1.5rem);
+		font-weight:400;
+		position: relative;
+		transition:0.3s ease all;
+		&::after {
+		    content: '';
+		    display: block;
+		    bottom:-5px;
+		    position: absolute;
+		    width:100%;
+			left:50%;
+			transform:translateX(-50%);
+		    height: 1px;
+		    background-image: linear-gradient(-30deg, #e456a9 5%, #aa61cc 95%);
+		    transition: width .5s;
+		}
+	}
+	.portfolioImage {
+		cursor:pointer;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		img {
+			filter: grayscale(100%);
+			transition:0.5s all ease;
+		}
+		&:hover img, &:focus img {
+			filter: none!important;
+			filter: grayscale(0%);
+		}
+	}
+	.portfolioItem {
+		margin-top:70px;
+	}
+	.tagContainer {
+		display: flex;
+		flex-wrap:wrap;
+		justify-content:center;
+	}
+	.tagItem {
+		border:1px solid $pink;
+		margin:15px 7px;
+		h4 {
+			font-family: $headingFont;
+			padding:5px 10px;
+			margin:0;
+			font-weight: 300;
+			font-size:0.8rem;
+		}
+	}
+}

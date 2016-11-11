@@ -1,0 +1,107 @@
+// About styles and skills
+
+.about .smallContainer {
+	border:3px solid $pink;
+	position: relative;
+	background-color: white;
+	z-index: 100;
+	max-width:700px;
+	h2 {
+		position: absolute;
+		top:-65px;
+		left:50%;
+		font-weight: 400;
+		transform:translateX(-50%);
+		background-color: white;
+		@include headingFontStyles($textBlack, 2.4rem);
+		padding-left:30px;
+		padding-right:30px;
+	}
+	p {
+		padding:35px 60px;
+	}
+}
+
+.aboutImage {
+	width:25%;
+	min-width: 200px;
+	height:auto;
+	margin:100px auto 0;
+	img {
+		border-radius:50%;
+	}
+}
+
+.skills {
+	z-index: -1;
+	padding-top:0;
+	position: relative;
+	// need an after element to go behind the about section
+	.container {
+		background-color: rgba(22,26,52,1);
+		padding-bottom:100px;
+		padding-top:50px;
+		position: relative;
+		&::after {
+			content: '';
+			background-color: rgba(22,26,52,1);
+			width:100%;
+			top:-400px;
+			height:420px;
+			position: absolute;
+		}
+	}
+	.secondContainer {
+		width:80%;
+		max-width:870px;
+		margin:0 auto;
+		display: flex;
+		justify-content:space-between;
+		align-items:baseline;
+	}
+	.skillColumn {
+		margin-left:30px;
+	}
+	.skillColumn:first-child {
+		width:40%;
+		margin-left:0;
+	}
+	.skillColumn:nth-child(2) {
+		width:20%;
+	}
+	.skillColumn:last-child {
+		width:20%;
+	}
+	.skillList {
+		display: flex;
+		flex-direction:column;
+		flex-wrap:wrap;
+		height:200px;
+	}
+	h3 {
+		letter-spacing: 0.1rem;
+		@include headingFontStyles( $siteWhite, 2rem);
+		font-weight:400;
+		position: relative;
+		transition:0.3s ease all;
+		text-align:left;
+		&::after {
+		    content: '';
+		    display: block;
+		    bottom:-5px;
+		    position: absolute;
+		    width:100%;
+			left:50%;
+			transform:translateX(-50%);
+		    height: 1px;
+		    background-image: linear-gradient(-30deg, #e456a9 5%, #aa61cc 95%);
+		    transition: width .5s;
+		}
+	}
+	p  {
+		padding:5px 0;
+		font-size:1.3rem;	
+		color:lighten($lightGrey,10%);	
+		text-align:left;
+	}
+}

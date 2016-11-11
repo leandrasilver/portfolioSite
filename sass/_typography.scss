@@ -1,0 +1,138 @@
+// Mixins
+
+@mixin headingFontStyles($color,$size) {
+	font-family: $headingFont;
+	color:$color;
+	font-size:$size;
+	text-transform: uppercase;
+	text-align:center;
+	letter-spacing: 0.1rem;
+}
+
+@mixin bodyFontStyles($color,$size) {
+	font-family: $bodyFont;
+	color:$color;
+	font-size:$size;
+	line-height:30px;
+	text-align: center;
+	margin:0;
+}
+
+h1 {
+	@include headingFontStyles( $siteWhite, 2.4rem);
+}
+
+// Links
+
+a {
+	text-decoration: none;
+}
+
+/* paragraphs */
+
+p {
+	@include bodyFontStyles( $darkGrey, 1rem);
+}
+
+// buttons
+button, input[type="submit"] {
+	border:none;
+	background-image: linear-gradient(-30deg, #aa61cc 1%, #e456a9 95%);
+	border-radius: 25px;
+	padding:5px 30px;
+	display: inline-block;
+	margin: 0 auto 50px;	
+	display: block;	
+	transition:background-image 1s ease;
+	a{
+		@include headingFontStyles($siteWhite, 1rem);
+		text-transform: uppercase;
+		font-weight:400;
+	}
+	&:hover, &:focus{
+		background-image: linear-gradient(-30deg,#e456a9 1%, #aa61cc 95%);
+	}
+}
+
+/*blockquotes*/
+blockquote {
+	background: #F7F7F7;
+	margin: 0;
+	padding: 20px;
+	p {
+		margin-top: 0;
+	}
+}
+
+/*tables*/
+
+table {
+	td {
+		padding: 10px;
+	}
+	tr td:first {
+		padding-right: 0;
+	}
+}
+
+/*def lists*/
+
+dt {
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+
+dd {
+	padding: 10px;
+	margin-left: 10px;
+}
+
+/*lists*/
+
+ul li, ol li {
+	padding: 3px;
+}
+
+/*PRE*/
+
+pre {
+	background: #F7F7F7;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+
+/*
+====================================
+Global Classes / Wordpress Specific
+====================================
+*/
+
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+img {
+	&.alignleft {
+		padding-right: 5px;
+	}
+	&.alignright {
+		padding-left: 5px;
+	}
+}
+
+.clear {
+	width: 100%;
+	float: left;
+	clear: both;
+}

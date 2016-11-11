@@ -1,0 +1,88 @@
+.contact {
+	position: relative;
+	.container{
+		border-top:20px solid #e456a9;
+		background-color: $darkPurple;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+	}
+	p{
+		font-family: $bodyFont;
+		font-size:1rem;
+		text-align:left;
+	}
+	.wpcf7 {
+		flex-basis:50%;
+		padding:30px 60px;
+	}
+	#wpgmza_map {
+		flex-basis:50%;
+	}
+	input,textarea {
+		background-color: $darkPurple;
+		outline:0;
+		border:0;
+		border-bottom:1px solid $darkGrey;
+		color:$darkGrey;
+		&:active, &:focus{
+			border-bottom:1px solid #e456a9;
+		}
+	}
+	.wpcf7-form textarea {
+		max-height:60px;
+		width:100%;
+		margin-bottom:30px;
+	}
+	input[type="text"], input[type="email"]{
+		margin-bottom:20px;
+		width:100%;
+	}
+	input[type="submit"] {
+		border:none;
+		color:white;
+		padding-top:8px;
+		padding-bottom:8px;
+		text-transform: uppercase;
+		font-size:0.8rem;
+		font-weight:600;
+		margin:0;
+	}
+	h2 {
+		@include headingFontStyles($siteWhite, 1.4rem);
+		font-weight:400;
+		text-align:left;
+		letter-spacing: 0.2rem;	
+		position: relative;
+		margin-bottom:10px;
+		&::after{
+			content:"";
+			width:70px;
+			height:3px;
+			background-color: #e456a9;
+			position: absolute;
+			bottom:-10px;
+			left:0;
+		}
+	}
+	h3 {
+		@include headingFontStyles($siteWhite, 1rem);
+		font-weight:300;
+		text-align:left;
+		position: relative;
+		text-transform:lowercase;
+		margin-bottom:20px;
+	}
+	.wpcf7-response-output {
+		border:none;
+		color: white;
+		position: absolute;
+		top:50px;
+		left:50%;
+		width:80%;
+		transform:translatex(-50%);
+	}
+	.wpcf7-not-valid-tip {
+		font-size:0.8rem;
+	}
+}

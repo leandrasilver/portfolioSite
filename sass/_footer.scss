@@ -1,0 +1,55 @@
+footer {
+	clear: both;
+	margin-bottom:20px;
+	.container{
+		background-color: $darkPurple;
+		border-top:1px solid $darkGrey;
+		display: flex;
+		align-items:center;
+		justify-content:space-between;
+		padding:20px 40px;
+	}
+	.socialHeaderContainer{
+		a{
+			display: flex;
+			justify-content:center;
+			align-item:center;
+			height:28px;
+			width:28px;	
+		}
+		i {
+			font-size:1rem;
+		}
+	}
+	.logoContainerFooter {
+		height:50px;
+		width:50px;
+		svg {
+			stroke:$darkGrey;
+			fill:$darkGrey;
+			stroke-width:1px;
+			&:hover, &:focus{
+				fill:white;
+				stroke:white;
+				transform:scale(1.2);
+			}
+		}
+	}
+	ul.menu {
+		flex-basis:30%;
+		li a {
+			color: $darkGrey;
+			text-transform: capitalize;
+			font-family:$bodyFont;
+			font-size:0.8rem;
+			font-weight:600;
+			&::after {
+				bottom:5px;
+			}
+		}
+	}
+	p {
+		font-size:10px;
+		margin-top:10px;
+	}
+}
