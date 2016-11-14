@@ -17,7 +17,7 @@
 ?>
 
 <header id="home">
-	<div class="headerBorderContainer" style="background-image:linear-gradient(rgba(22,26,52,0.9),rgba(22,26,52,1)),url(<?php echo $headerBackground['url']?>)">
+	<div class="headerBorderContainer" style="background-image:linear-gradient(rgba(22,26,52,0.8),rgba(22,26,52,1)90%),url(<?php echo $headerBackground['url']?>)">
 		<div class="logoContainer">
 			<?php 
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -48,13 +48,13 @@
 		<h1 class="aboveHeader"><?php the_field('aboveheader'); ?></h1>
 		<h2 class="subHeading"><?php the_field('subHeading'); ?></h3>
 		<h2 class="bigFadedLetters"><?php the_field('big_letters'); ?></h2>
-		<div class="arrowDown">
-			<a href="#about"><i class="fa fa-angle-double-down"></i></a>
- 		</div>
   		<div class="socialHeaderContainer">
-			<a href="http://www.github.com/leandrasilver>"><i class="fa fa-github"></i></a>
-			<a href="http://www.linkedin.com/leandrasilver>"><i class="fa fa-linkedin"></i></a>
-			<a href="http://www.twitter.com/leandrasilver>"><i class="fa fa-twitter"></i></a>
+			<a href="http://www.github.com/leandrasilver" target="_blank"><i class="fa fa-github"></i></a>
+			<a href="https://ca.linkedin.com/in/leandrasilver" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="http://www.twitter.com/leandrasilver" target="_blank"><i class="fa fa-twitter"></i></a>
   		</div> <!-- ./socialHeaderContainer -->
+  		<button class="arrowDown" alt="to about">
+			<a href="#about"><i class="fa fa-angle-double-down"></i></a>
+ 		</button>
   	</div> <!-- ./headerBorderContainer -->
 </header>

@@ -1,9 +1,8 @@
 footer {
 	clear: both;
-	margin-bottom:20px;
+	margin-bottom:5px;
 	.container{
-		background-color: $darkPurple;
-		border-top:1px solid $darkGrey;
+		background-color: darken($darkPurple,5%);
 		display: flex;
 		align-items:center;
 		justify-content:space-between;
@@ -36,7 +35,9 @@ footer {
 		}
 	}
 	ul.menu {
-		flex-basis:30%;
+		margin-right:auto;
+		flex-basis:20%;
+		margin-left:30px;
 		li a {
 			color: $darkGrey;
 			text-transform: capitalize;
@@ -46,6 +47,12 @@ footer {
 			&::after {
 				bottom:5px;
 			}
+		}
+		li:first-child {
+			display:none;
+		}
+		li:last-child {
+			display:none;
 		}
 	}
 	p {

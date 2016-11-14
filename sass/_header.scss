@@ -48,20 +48,24 @@ header {
 		transform:translate(-50%,-50%);
 		z-index: -1;
 		overflow: hidden;
-		transition:0.3s all ease;
+		transition:0.8s color ease, 0.1s font-size ease;
 	}
 	.subHeading {
 		position: absolute;
 		top:54%;
+		left:50%;
 		font-size:1.1rem;
 		font-weight: 300;
-		text-align: center;
+		transform:translatex(-50%);
+		text-align:center;
 	}
 	.arrowDown {
 		position: absolute;
 		bottom:0;
 		left:50%;
 		font-size:2rem;
+		background:transparent;
+		border:0;
 		transform:translateX(-50%);
 		&:before {
 			content:'';
@@ -79,7 +83,7 @@ header {
 		a {
 			color:$darkPurple;
 		}
-		&:hover a {
+		&:hover a, &:focus a{
 			color:#e456a9;
 		}
 	}

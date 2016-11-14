@@ -78,8 +78,9 @@
 @media screen and (max-width: 768px) {
 	// Header styles
 	header {
-		span {
-			display: none;
+		.bigFadedLetters{
+			font-size:9rem;
+			top:34%;
 		}
 	}
 	// contact styles
@@ -88,6 +89,7 @@
 	}
 	.contact .wpcf7 {
 		flex-basis:100%;
+		padding:30px;
 	}
 	// footer Styles
 	footer .container {
@@ -98,14 +100,17 @@
 @media screen and (max-width:650px) {
 	#navIcon{
 		display: block;
+		top:22px;
+		right:30px;
 	}
 	// hamburgerMenu 
 	.mainNav {
-		position: fixed !important;
+		position: absolute;
 		top: 0;
+		background-color: white;
 		left: 0;
 		margin-top:0;
-		height: 100%;
+		height: 106%;
 		width: 100%;
 		display: none;
 		flex-flow: column wrap;
@@ -114,12 +119,11 @@
 		z-index: 10;
 	}
 	ul#menu-main-menu {
-		margin-top:16px;
-		position: fixed;
+		position: absolute;
 		top:0;
-		left:5%;
-		height:78%;
-		width:90%;
+		left:0;
+		height:94%;
+		width:100%;
 		flex-direction:column;
 		background: $darkPurple;
 		li {
@@ -150,6 +154,14 @@
 				width:110%;
 			}
 		}
+		.bigFadedLetters{
+			font-size:7rem;
+			top:40%;
+		}
+	}
+	// Contact
+	.contact .container {
+		border-top:40px solid $pink;
 	}
 	// Skills section
 	.skills {
@@ -172,10 +184,6 @@
 	.smallContainer {
 		width: 85%;
 	}
-	.about p {
-		font-size:0.8rem;
-		line-height: 1.5rem;
-	}
 }
 
 @media screen and ( max-width:500px) {
@@ -186,31 +194,43 @@
 			margin-top:5px;
 		}
 		.bigFadedLetters {
-			font-size:9rem;
-			top:30%;
+			font-size:6rem;
 		}
 		.aboveHeader {
 			font-size:2.5rem;
-			top:-8%;
+			top:-5%;
 			&::after {
 				width:80%;
 			}
 		}
 		.subHeading {
-			top:52%;
-		}
-		svg.logo {
-			transform:scale(2);
-		}
-		.logoContainer {
-			margin:20px;
+			top:53%;
+			width:100%;
 		}
 		.socialHeaderContainer{
-			top:70%;
+			top:72%;
+		}
+		.logo{
+			height:40px;
+			width:40px;
 		}
 	}
-	// Skills section
-	.skills {
+	//About and Skills section
+	.about .smallContainer{
+		p {
+			font-size:0.9rem;
+			line-height: 1.6rem;
+			padding-left:20px;
+			padding-right:20px;
+		}
+		.aboutImage {
+			width:180px;
+			margin-top:100px;
+		}
+	}
+	.skills .container{
+		padding-top:10px;
+		padding-bottom:50px;
 		.skillColumn:first-child {
 			width:80%;
 		}
@@ -219,14 +239,34 @@
 		}
 	}
 	// Footer styles
-	footer .socialHeaderContainer {
-		flex-wrap:wrap;
-		max-width:50%;
-		justify-content:center;
+	footer .container {
+		display: block;
+		a.logoContainerFooter{
+			width:100%;
+			display:inline-block;
+			margin: 0 auto;
+			svg {
+				width:70px;
+				margin:10px auto;
+				left:50%;
+				transform:translateX(-50%);
+			}
+		}
+		.socialHeaderContainer {
+			justify-content:center;
+			order:1;
+		}
 	}
 }
 
 @media screen and ( max-width:420px) {
+	// Heading Section
+	header {
+		.bigFadedLetters{
+			font-size:5rem;
+			top:43%;
+		}
+	}
 	// Portfolio Section
 	.portfolio {
 		.buttonContainer {
@@ -255,5 +295,16 @@
 			}
 		}
 	}
+}
 
+@media screen and (max-width:330px) {
+	// heading section
+	header {
+		.bigFadedLetters {
+			display:none;
+		}
+		.subHeading {
+			top:56%;
+		}
+	}
 }

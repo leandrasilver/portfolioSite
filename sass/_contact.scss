@@ -9,6 +9,7 @@
 	}
 	p{
 		font-family: $bodyFont;
+		color: #777;
 		font-size:1rem;
 		text-align:left;
 	}
@@ -32,6 +33,8 @@
 	.wpcf7-form textarea {
 		max-height:60px;
 		width:100%;
+		max-width:101%;
+		resize:none;
 		margin-bottom:30px;
 	}
 	input[type="text"], input[type="email"]{
@@ -47,6 +50,9 @@
 		font-size:0.8rem;
 		font-weight:600;
 		margin:0;
+		&:focus {
+			outline:3px solid lightblue;
+		}
 	}
 	h2 {
 		@include headingFontStyles($siteWhite, 1.4rem);
@@ -65,7 +71,7 @@
 			left:0;
 		}
 	}
-	h3 {
+	a {
 		@include headingFontStyles($siteWhite, 1rem);
 		font-weight:300;
 		text-align:left;

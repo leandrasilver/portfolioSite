@@ -2,8 +2,8 @@
 
 
 <!-- Main Section -->
-<main role="main">
-	<section id="about" class="about">
+<main role="main" id="about">
+	<section class="about">
 		<div class="smallContainer">
 			<h2><?php the_field('about_me_title') ?></h2>
 			<div class="aboutImage">
