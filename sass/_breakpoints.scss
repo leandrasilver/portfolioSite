@@ -1,14 +1,5 @@
 //breakpoints
-@media screen and (max-width:1100px) {
-	// Skills section
-	.skills {
-		p  {
-			font-size:1rem;	
-		}
-	}
-}
-
-@media screen and (min-width:990px) {
+@media screen and (min-width:1044px) {
 	// Portfolio Styles
 	.portfolio {
 		.portfolioItem{
@@ -54,14 +45,14 @@
 	}
 }
 
-@media screen and (max-width:990px) {
+@media screen and (max-width:1030px) {
 	// footer Styles
 	footer ul.menu {
 		display: none;
 	}
-}
-
-@media screen and (max-width:800px) {
+	.skillColumn:last-child {
+		display: none;
+	}
 	.skills {
 		.skillColumn:first-child {
 			width:50%;
@@ -69,9 +60,6 @@
 		.skillColumn:nth-child(2) {
 			width:35%;
 		}
-	}
-	.skillColumn:last-child {
-		display: none;
 	}
 }
 
@@ -96,6 +84,29 @@
 		padding: 10px 20px;
 	}
 } 
+@media screen and (max-width:690px) {
+	// Skills section
+	.skills {
+		.container {
+			transition:0.3s all ease;
+			padding-bottom:40px;
+			padding-top:10px;
+		}
+		.skillColumn:first-child {
+			width:90%;
+		}
+		.skillColumn:nth-child(2) {
+			width:90%;
+		}
+		.skillList{
+			flex-wrap:nowrap;
+			height: auto;
+			p{
+				padding:0;
+			}
+		}
+	}
+}
 
 @media screen and (max-width:650px) {
 	#navIcon{
@@ -163,23 +174,6 @@
 	.contact .container {
 		border-top:40px solid $pink;
 	}
-	// Skills section
-	.skills {
-		.secondContainer {
-			flex-direction:column;
-		}
-		.skillColumn:first-child {
-			width:70%;
-			display: block;
-			flex-wrap:none;
-			margin:0 auto;
-		}
-		.skillColumn:nth-child(2) {
-			width:70%;
-			display: block;
-			margin:0 auto;
-		}
-	}
 	// General style
 	.smallContainer {
 		width: 85%;
@@ -228,14 +222,21 @@
 			margin-top:100px;
 		}
 	}
-	.skills .container{
-		padding-top:10px;
-		padding-bottom:50px;
+	// skills
+	.skills {
+		.secondContainer {
+			flex-direction:column;
+		}
 		.skillColumn:first-child {
-			width:80%;
+			width:90%;
+			display: block;
+			flex-wrap:none;
+			margin:0 auto;
 		}
 		.skillColumn:nth-child(2) {
-			width:80%;
+			width:90%;
+			display: block;
+			margin:0 auto;
 		}
 	}
 	// Footer styles
@@ -272,28 +273,18 @@
 		.buttonContainer {
 			display: block;
 		}
-		button{
+		a.button{
+			width:180px;
 			margin:0 auto;
 			&:last-child {
 				margin-top:20px;
 			}
 		}
 	}
-	// Skills section
-	.skills {
-		.skillColumn:first-child {
-			width:90%;
-		}
-		.skillColumn:nth-child(2) {
-			width:90%;
-		}
-		.skillList{
-			flex-wrap:nowrap;
-			height: auto;
-			p{
-				padding:0;
-			}
-		}
+	.about a {
+		width:70%!important;
+		margin-left: auto;
+		margin-right:auto;
 	}
 }
 
@@ -305,6 +296,11 @@
 		}
 		.subHeading {
 			top:56%;
+		}
+	}
+	.portfolio .portfolioImage {
+		a {
+			margin:0;
 		}
 	}
 }

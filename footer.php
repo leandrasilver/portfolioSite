@@ -12,16 +12,16 @@
 			'container' => false,
 			'theme_location' => 'primary'
 		)); ?>
-  		<div class="socialHeaderContainer">
-  			<a href="http://www.github.com/leandrasilver" target="_blank"><i class="fa fa-github"></i></a>
-  			<a href="http://www.linkedin.com/leandrasilver" target="_blank"><i class="fa fa-linkedin"></i></a>
-  			<a href="http://www.twitter.com/leandrasilver" target="_blank"><i class="fa fa-twitter"></i></a>
+  		<div class="socialFooterContainer ">
+  			<a href="http://www.github.com/leandrasilver" target="_blank" aria-hidden="true"><i class="fa fa-github"></i></a>
+  			<a href="https://ca.linkedin.com/in/leandrasilver" target="_blank" aria-hidden="true"><i class="fa fa-linkedin"></i></a>
+  			<a href="http://www.twitter.com/leandrasilver" target="_blank" aria-hidden="true"><i class="fa fa-twitter"></i></a>
   			<a href="http://codepen.io/leandrasilver/" target="_blank"><i class="fa fa-3x fa-codepen" aria-hidden="true"></i></a>
   			<a href="https://medium.com/@leandrasilver" target="_blank"><i class="fa fa-3x fa-medium" aria-hidden="true"></i></a>
-  			<a href="mailto:leandrasilver@gmail.com" target="_blank"><i class="fa fa-3x fa-envelope" aria-hidden="true"></i></a>
-  		</div> <!-- ./socialHeaderContainer -->
+  			<a href="mailto:hello@leandrasilver.com" target="_blank"><i class="fa fa-3x fa-envelope" aria-hidden="true"></i></a>
+  		</div> <!-- ./socialFooterContainer -->
  	</div> <!-- /.container -->
- 	<p> Developed by Leandra Silver &copy; <?php echo date('Y'); ?></p>
+ 	<p> Headshot by Pam Lau. Developed by Leandra Silver &copy; <?php echo date('Y'); ?></p>
 </footer>
 
 <script>

@@ -6,6 +6,9 @@ header {
 	align-items:flex-start;
 	margin-top:3%;
 	justify-content:center;
+	.logoContainer{
+		cursor: pointer;
+	}
 	.headerBorderContainer {
 		background-position: center;
 		background-size: cover;
@@ -82,6 +85,7 @@ header {
 		}
 		a {
 			color:$darkPurple;
+			transition:0.4s ease all;
 		}
 		&:hover a, &:focus a{
 			color:#e456a9;

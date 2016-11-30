@@ -1,5 +1,5 @@
 .portfolio {
-	button{
+	a{
 		margin:0;
 		margin: 0 2%;
 	}
@@ -47,6 +47,9 @@
 	}
 	.portfolioItem {
 		margin-top:70px;
+		img {
+			transition:1.5s ease-in all;
+		}
 	}
 	.tagContainer {
 		display: flex;
@@ -55,13 +58,37 @@
 	}
 	.tagItem {
 		border:1px solid $pink;
-		margin:15px 7px;
+		margin:15px 7px 0;
 		h4 {
 			font-family: $headingFont;
 			padding:5px 10px;
 			margin:0;
 			font-weight: 300;
-			font-size:0.8rem;
+			font-size:0.9rem;
+			position: relative;
+			transition:color 1s ease-out;
+			&:after {
+				background: -webkit-linear-gradient(-30deg, #e456a9 5%, #aa61cc 95%);
+				content:"";
+				opacity:0;
+				width:inherit;
+				height:inherit;
+				position: absolute;
+				z-index:-10;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				border:1px solid white;
+				transition:opacity 1s ease-out;
+			}
+			&:hover:after{
+				opacity:1;
+			}
+			&:hover {
+				color:white;
+			}
 		}
+
 	}
 }

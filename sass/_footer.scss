@@ -8,24 +8,29 @@ footer {
 		justify-content:space-between;
 		padding:20px 40px;
 	}
-	.socialHeaderContainer{
-		a{
-			display: flex;
-			justify-content:center;
-			align-item:center;
-			height:28px;
-			width:28px;	
+	.socialFooterContainer {
+		justify-content:space-between;
+		i{
+			z-index: 10;
+			font-size:1rem;	
 		}
-		i {
-			font-size:1rem;
+		a {
+			margin:0;
+			&:after {
+				z-index:1;
+			}
+			&:hover:after , &:focus:after{
+				opacity:1!important;
+			}
 		}
 	}
+
 	.logoContainerFooter {
 		height:50px;
 		width:50px;
 		svg {
 			stroke:$darkGrey;
-			fill:$darkGrey;
+			fill:$lightGrey;
 			stroke-width:1px;
 			&:hover, &:focus{
 				fill:white;
@@ -39,7 +44,7 @@ footer {
 		flex-basis:20%;
 		margin-left:30px;
 		li a {
-			color: $darkGrey;
+			color: $lightGrey;
 			text-transform: capitalize;
 			font-family:$bodyFont;
 			font-size:0.8rem;

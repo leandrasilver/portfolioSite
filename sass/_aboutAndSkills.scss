@@ -20,6 +20,9 @@
 	p {
 		padding:35px 50px;
 	}
+	a.button {
+		width:270px;
+	}
 }
 
 .aboutImage {
@@ -27,6 +30,8 @@
 	margin:80px auto 0;
 	img {
 		border-radius:50%;
+		transition:1.5s ease-in all;
+		filter:grayscale(100%);
 	}
 }
 
@@ -37,9 +42,10 @@
 	// need an after element to go behind the about section
 	.container {
 		background-color: rgba(22,26,52,1);
-		padding-bottom:100px;
-		padding-top:50px;
+		padding-bottom:60px;
+		padding-top:40px;
 		position: relative;
+		max-width:950px;
 		&::after {
 			content: '';
 			background-color: rgba(22,26,52,1);
@@ -97,7 +103,7 @@
 		}
 	}
 	p  {
-		padding:5px 0;
+		padding:2px 0;
 		font-size:1.3rem;	
 		color:lighten($lightGrey,10%);	
 		text-align:left;

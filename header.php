@@ -53,8 +53,8 @@
 			<a href="https://ca.linkedin.com/in/leandrasilver" target="_blank"><i class="fa fa-linkedin"></i></a>
 			<a href="http://www.twitter.com/leandrasilver" target="_blank"><i class="fa fa-twitter"></i></a>
   		</div> <!-- ./socialHeaderContainer -->
-  		<button class="arrowDown" alt="to about">
+  		<div class="arrowDown" alt="to about">
 			<a href="#about"><i class="fa fa-angle-double-down"></i></a>
- 		</button>
+ 		</div>
   	</div> <!-- ./headerBorderContainer -->
 </header>

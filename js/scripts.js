@@ -1,7 +1,7 @@
 $(function(){
 
 	console.log("Welcome to the console :D ");
-
+	
 	// SmoothScroll on anchor tags
 	$('a').smoothScroll();
 
@@ -19,8 +19,28 @@ $(function(){
 	});
 
 	$('.mainNav li').on('click', function(){
-		$('.mainNav').removeClass('jsShow');
-		$('#navIcon').toggleClass('open');
+	    if ($('.mainNav li').hasClass('jsShow')){
+	        $('.mainNav').removeClass('jsShow');
+			$('#navIcon').toggleClass('open');
+	    }
+	});
+
+	$('.portfolioItem').on('inview', function(event, isInView) {
+		if (isInView) {
+			$(this).find('img').addClass('jsColorShow');
+			// remove the filter (only none !important)
+		} else {
+			$(this).find('img').removeClass('jsColorShow');
+		}
+	});
+
+	$('.about').on('inview', function(event, isInView) {
+		if (isInView) {
+			$(this).find('img').addClass('jsColorShow');
+			// remove the filter (only none !important)
+		} else {
+			$(this).find('img').removeClass('jsColorShow');
+		}
 	});
 
 	// Contact form

@@ -15,7 +15,7 @@
 				<p><?php the_field('about_me_content') ?></p>
 			</div>
 			<!-- /.aboutContent -->
-			<button> <a href=" <?php the_field('resume_link') ?>">Check Out My Resume</a></button>
+			<a class="button" href=" <?php the_field('resume_link') ?>">Check Out My Resume</a>
 		</div>
 		<!-- /.aboutContainer -->	
 	</section>  <!-- /.about -->
@@ -77,8 +77,8 @@
 						</div>
 						<!-- /.tagContainer -->
 						<div class="buttonContainer">
-							<button><a href="<?php the_field('live') ?>">View Live</a></button>
-							<button><a href="<?php the_field('github') ?>">View on Github</a></button>
+							<a role="button" class="button" href="<?php the_field('live') ?>">View Live</a>
+							<a role="button" class="button" href="<?php the_field('github') ?>">View on Github</a>
 						</div>
 						<!-- /.buttonContainer -->
 					</div>
