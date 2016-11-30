@@ -77,8 +77,8 @@
 						</div>
 						<!-- /.tagContainer -->
 						<div class="buttonContainer">
-							<a role="button" class="button" href="<?php the_field('live') ?>">View Live</a>
-							<a role="button" class="button" href="<?php the_field('github') ?>">View on Github</a>
+							<a role="button" class="button" href="<?php the_field('live') ?>"><p>View Live</p></a>
+							<a role="button" class="button" href="<?php the_field('github') ?>"><p>View on Github</p></a>
 						</div>
 						<!-- /.buttonContainer -->
 					</div>

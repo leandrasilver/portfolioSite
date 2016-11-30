@@ -37,21 +37,46 @@ p {
 // buttons
 .button, input[type="submit"] {
 	border:none;
-	background-image: linear-gradient(-30deg, #aa61cc 1%, #e456a9 95%);
+	background-image: linear-gradient(-30deg, #aa61cc 30%, #e456a9 95%);
 	border-radius: 25px;
-	padding:5px 30px;
+	padding:1px 25px;
 	display: inline-block;
 	margin: 0 auto 50px;	
 	display: block;	
-	transition:background-image 1s ease;
-	@include headingFontStyles($siteWhite, 1rem);
+	position: relative;
+	z-index: 10;
+	p {
+		@include headingFontStyles($siteWhite, 1rem);
+		position: relative;
+		z-index: 100;
+		padding:0;
+		margin:0;
+	}
 	a{
 		@include headingFontStyles($siteWhite, 1rem);
 		text-transform: uppercase;
 		font-weight:400;
+		position: relative;
+		z-index:200;
 	}
-	&:hover, &:focus{
+	&:hover:after, &:focus:after{
+		opacity:1;
+		transition:opacity 0.6s ease-out;
+	}
+	&:after {
 		background-image: linear-gradient(-30deg,#e456a9 1%, #aa61cc 95%);
+		content:"";
+		opacity:0;
+		width:inherit;
+		height:inherit;
+		position: absolute;
+		z-index:20;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		transition:opacity 0.6s ease-out;
+		border-radius: 25px;
 	}
 }
 
